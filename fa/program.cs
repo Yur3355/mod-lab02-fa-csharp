@@ -26,13 +26,19 @@ namespace fans
       IsAcceptState = false,
       Transitions = new Dictionary<char, State>()
     };
-    public State c = new State()
-    {
-      Name = "c",
-      IsAcceptState = false,
-      Transitions = new Dictionary<char, State>()
-    };
-    public State d = new State()
+    public FA1()
+        {
+             a.Transitions['0'] = b;
+             a.Transitions['1'] = c;
+             b.Transitions['0'] = d;
+             b.Transitions['1'] = e;
+             c.Transitions['0'] = e;
+             c.Transitions['1'] = c;
+             d.Transitions['0'] = d;
+             d.Transitions['1'] = d;
+             e.Transitions['0'] = d;
+             e.Transitions['1'] = e;
+        }
     {
       Name = "d",
       IsAcceptState = false,
@@ -44,7 +50,7 @@ namespace fans
       IsAcceptState = true,
       Transitions = new Dictionary<char, State>()
     };
-    public FA1()
+    public FA11()
         {
              a.Transitions['0'] = b;
              a.Transitions['1'] = c;
